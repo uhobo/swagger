@@ -67,7 +67,7 @@ public class FtoCService {
 	            response = ResponseCode.class, tags = "clients")
 	 public Response generateClient(
 			 	@Context HttpServletRequest request,
-	            @ApiParam(value = "The target language for the client library", required = true) @PathParam("language") String language
+	            @ApiParam(value = "The target language for the client library", required = true, allowableValues="java,csharp,csharp-dotnet2") @PathParam("language") String language
 	            /*@ApiParam(value = "Configuration for building the client library", required = true) GeneratorInput opts*/)
 	            throws Exception  {
 		
